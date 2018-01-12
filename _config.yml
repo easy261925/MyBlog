@@ -78,4 +78,5 @@ theme: hexo-theme-next-master
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:easy261925/MyWebBlog.git
+  #repo: git@github.com:easy261925/MyWebBlog.git
+  repo: git@github.com:easy261925/MyBlog.git
