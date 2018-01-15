@@ -75,16 +75,16 @@
 
 
 
-<meta name="description" content="在平坦的道路上曲折前行">
+<meta name="description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NodeJS 学习之路">
-<meta property="og:url" content="http://yoursite.com/2018/01/13/NodeJS-学习之路/index.html">
+<meta property="og:title" content="关于Array的ES5部分方法的实现">
+<meta property="og:url" content="http://yoursite.com/2018/01/13/关于Array的ES5部分方法的实现/index.html">
 <meta property="og:site_name" content="万事如意">
-<meta property="og:description" content="在平坦的道路上曲折前行">
-<meta property="og:updated_time" content="2018-01-13T03:42:34.156Z">
+<meta property="og:description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
+<meta property="og:updated_time" content="2018-01-13T05:32:13.877Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeJS 学习之路">
-<meta name="twitter:description" content="在平坦的道路上曲折前行">
+<meta name="twitter:title" content="关于Array的ES5部分方法的实现">
+<meta name="twitter:description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
 
 
 
@@ -112,7 +112,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/13/NodeJS-学习之路/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/13/关于Array的ES5部分方法的实现/"/>
 
 
 
@@ -744,259 +744,6 @@ Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/MyFirstTest/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/11/MyFirstTest/" itemprop="url">MyFirstTest</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T19:48:25+08:00">2018-01-11</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/11/MyFirstTest/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/11/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T13:10:35+08:00">2018-01-11</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/11/hello-world/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1044,7 +791,7 @@ Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压�
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
