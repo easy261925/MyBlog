@@ -119,7 +119,7 @@
 
 
 
-  <title>万事如意</title>
+  <title>关于puppeteer | 万事如意</title>
   
 
 
@@ -138,8 +138,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     
@@ -200,9 +199,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -234,9 +233,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/20/关于puppeteer/" itemprop="url">关于puppeteer</a></h1>
+          <h1 class="post-title" itemprop="name headline">关于puppeteer</h1>
         
 
         <div class="post-meta">
@@ -306,21 +303,35 @@
       
 
       
-        
-          
-          介绍一下Puppeteer
-Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI）
-有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。
-使用Puppeteer，相当
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/20/关于puppeteer/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="介绍一下Puppeteer"><a href="#介绍一下Puppeteer" class="headerlink" title="介绍一下Puppeteer"></a>介绍一下Puppeteer</h3><blockquote>
+<p>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI）</p>
+<p>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。</p>
+<p>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
+</blockquote>
+<h3 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h3><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据,并且通过 <a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a> 构建一个简单网页,来展示爬取到的内容。</p>
+<h4 id="Puppeteer-几个重要功能"><a href="#Puppeteer-几个重要功能" class="headerlink" title="Puppeteer 几个重要功能"></a>Puppeteer 几个重要功能</h4><ul>
+<li>可以抓取网站内容</li>
+<li>可以自动化表单提交、搜索网络内容、UI测试等</li>
+<li>获取网页生成的PDF、图片、视频等资源</li>
+</ul>
+<p>接下来的操作基于 Node 环境</p>
+<p><code>mkdir test &amp;&amp; cd test</code></p>
+<p><code>npm init</code></p>
+<p><code>npm install puppeteer</code></p>
+<!--上述命令墙内用户可能会有问题，建议科学上网-->
+<h4 id="Puppeteer-基本用法"><a href="#Puppeteer-基本用法" class="headerlink" title="Puppeteer 基本用法"></a>Puppeteer 基本用法</h4><p>1.使用<code>puppeteer.launch()</code>运行puppeteer，他会return一个promise，使用then方法获取browser实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">Browser API</a>.</p>
+<p>2.拿到browser实例后，通过<code>browser.newPage()</code>方法，可以得到一个page实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page" target="_blank" rel="noopener">Page API</a>.</p>
+<p>3.使用<code>page.goto()</code>方法，<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener">跳转至ES6标准入门</a>.</p>
+<p>4.在<code>page.evaluate()</code>方法中注册回调函数，并分析dom结构，从下图可以进行详细分析，并通过<code>document.querySelectorAll(&#39;ol li a&#39;)</code>拿到想要获取的内容.</p>
+<h4 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h4><p><a href="https://github.com/easy261925/Puppeteer" target="_blank" rel="noopener">点我查看详细代码</a></p>
+<h4 id="说一下我遇到坑吧"><a href="#说一下我遇到坑吧" class="headerlink" title="说一下我遇到坑吧"></a>说一下我遇到坑吧</h4><ol>
+<li>在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,<a href="链接: https://pan.baidu.com/s/1dIMKjk"> node_modules 百度云下载地址 </a> 密码: bxhy. 不需要 <code>npm i</code>了, 下载完后直接使用<code>node getData.js</code>即可.</li>
+<li>代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array<br>的新用法还不是特别清楚， 本人打算学习<a href="https://github.com/ruanyf/es6tutorial" target="_blank" rel="noopener"> 阮一峰老师的ES6 </a>之后, 在来详细补充其原理.</li>
+<li>爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:<code>img:[&#39;1.jpg&#39;,&#39;2.jpg&#39;,&#39;3.jpg&#39;];title:[ &#39;AAAAAAA&#39;,&#39;BBBBBBB&#39;]</code> 为了使用方便，我们对数据做了一些调整，让它变为<code>[{item1:[&#39;1.jpg&#39;,&#39;AAAAAAA&#39;]},{item1:[&#39;2.jpg&#39;,&#39;BBBBBBB&#39;]}]</code>,这样我们在铺到页面上时使用更加方便了.</li>
+</ol>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。</p>
+<p>特别感谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
       
     </div>
     
@@ -335,272 +346,36 @@ Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认h
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于Array的ES5部分方法的实现/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于Array的ES5部分方法的实现/" itemprop="url">关于Array的ES5部分方法的实现</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-13T13:30:47+08:00">2018-01-13</time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/puppeteer/" rel="tag"># puppeteer</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          关于Array的ES5部分方法的实现
-forEach
-
-
-if (typeof Array.prototype.forEach !== &quot;function&quot;) {
-    Array.prototype.myForEach = function (fn) {
-        fo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/13/关于Array的ES5部分方法的实现/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/13/关于Array的ES5部分方法的实现/" rel="next" title="关于Array的ES5部分方法的实现">
+                <i class="fa fa-chevron-left"></i> 关于Array的ES5部分方法的实现
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/NodeJS-学习之路/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/NodeJS-学习之路/" itemprop="url">NodeJS 学习之路</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-13T11:42:34+08:00">2018-01-13</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/13/NodeJS-学习之路/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -610,269 +385,23 @@ if (typeof Array.prototype.forEach !== &quot;function&quot;) {
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/12/2018前端面试题总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/12/2018前端面试题总结/" itemprop="url">2018前端面试题总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-12T19:48:25+08:00">2018-01-12</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-计算机网络一、HTTP协议头含有哪些重要的部分，HTTP状态码Request Headers (请求头)Accept : 浏览器可以接受的媒体类型
-Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压缩方法，是否支持压缩，支持什么压缩方法（gzip，deflate），（注
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/12/2018前端面试题总结/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/12/WebSocket：5分钟从入门到精通/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万事如意">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="万事如意">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/12/WebSocket：5分钟从入门到精通/" itemprop="url">WebSocket：5分钟从入门到精通</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-12T08:47:35+08:00">2018-01-12</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          一、内容概览WebSocket的出现，使得浏览器具备了实时双向通信的能力。本文由浅入深，介绍了WebSocket如何建立连接、交换数据的细节，以及数据帧的格式。此外，还简要介绍了针对WebSocket的安全攻击，以及协议是如何抵御类似攻击的。
-二、什么是WebSocketHTML5开始提供的一种浏览
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/12/WebSocket：5分钟从入门到精通/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
+
+
+
+
 
         </div>
         
@@ -893,8 +422,17 @@ Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -974,6 +512,22 @@ Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍一下Puppeteer"><span class="nav-number">1.</span> <span class="nav-text">介绍一下Puppeteer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详情请看Puppeteer官方文档"><span class="nav-number">2.</span> <span class="nav-text">详情请看Puppeteer官方文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-几个重要功能"><span class="nav-number">2.1.</span> <span class="nav-text">Puppeteer 几个重要功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-基本用法"><span class="nav-number">2.2.</span> <span class="nav-text">Puppeteer 基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码"><span class="nav-number">2.3.</span> <span class="nav-text">具体代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说一下我遇到坑吧"><span class="nav-number">2.4.</span> <span class="nav-text">说一下我遇到坑吧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">4.</span> <span class="nav-text">未完待续。。。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1101,6 +655,10 @@ Accept-Encoding :  浏览器申明自己接收的编码方法，通常指定压�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
 
   
 

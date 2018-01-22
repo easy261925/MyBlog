@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="puppeteer," />
 
 
 
@@ -75,16 +75,17 @@
 
 
 
-<meta name="description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
+<meta name="description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
+<meta name="keywords" content="puppeteer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Array的ES5部分方法的实现">
-<meta property="og:url" content="http://yoursite.com/2018/01/13/关于Array的ES5部分方法的实现/index.html">
+<meta property="og:title" content="关于puppeteer">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/关于puppeteer/index.html">
 <meta property="og:site_name" content="万事如意">
-<meta property="og:description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
-<meta property="og:updated_time" content="2018-01-13T05:32:13.877Z">
+<meta property="og:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
+<meta property="og:updated_time" content="2018-01-22T01:37:36.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于Array的ES5部分方法的实现">
-<meta name="twitter:description" content="关于Array的ES5部分方法的实现 forEach   if (typeof Array.prototype.forEach !== &amp;quot;function&amp;quot;) {     Array.prototype.myForEach = function (fn) {         for (var i = 0; i &amp;lt; this.length; i++) {">
+<meta name="twitter:title" content="关于puppeteer">
+<meta name="twitter:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
 
 
 
@@ -112,13 +113,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/13/关于Array的ES5部分方法的实现/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/20/关于puppeteer/"/>
 
 
 
 
 
-  <title>Archiv | 万事如意</title>
+  <title>Archive | 万事如意</title>
   
 
 
@@ -177,37 +178,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Über</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Kategorien</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />Schedule</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
 
@@ -242,7 +213,7 @@
         
           
         
-        Öhm..! Insgesamt 4 Artikel. Bleib dran.
+        Um..! 5 posts in total. Keep on posting.
       </span>
 
       
@@ -256,6 +227,43 @@
           <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2018">2018</h1>
           </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/01/20/关于puppeteer/" itemprop="url">
+              
+                <span itemprop="name">关于puppeteer</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-01-20T15:23:24+08:00"
+              content="2018-01-20" >
+          01-20
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
         
         
 
@@ -450,16 +458,34 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -603,6 +629,8 @@
   
 
 
+
+
   <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
 
   <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
@@ -638,9 +666,9 @@
 
 
 
-  
+	
 
-
+	
 
 
 
