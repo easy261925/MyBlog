@@ -82,7 +82,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/20/关于puppeteer/index.html">
 <meta property="og:site_name" content="万事如意">
 <meta property="og:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
-<meta property="og:updated_time" content="2018-01-22T01:37:36.542Z">
+<meta property="og:updated_time" content="2018-01-22T01:46:19.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于puppeteer">
 <meta name="twitter:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
@@ -178,7 +178,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
         </li>
       
 
@@ -243,7 +243,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T15:23:24+08:00">2018-01-20</time>
             
@@ -262,7 +262,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -308,7 +308,7 @@
 <p>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。</p>
 <p>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
 </blockquote>
-<h3 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h3><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据,并且通过 <a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a> 构建一个简单网页,来展示爬取到的内容。</p>
+<h3 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h3><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据。</p>
 <h4 id="Puppeteer-几个重要功能"><a href="#Puppeteer-几个重要功能" class="headerlink" title="Puppeteer 几个重要功能"></a>Puppeteer 几个重要功能</h4><ul>
 <li>可以抓取网站内容</li>
 <li>可以自动化表单提交、搜索网络内容、UI测试等</li>
@@ -324,13 +324,14 @@
 <p>3.使用<code>page.goto()</code>方法，<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener">跳转至ES6标准入门</a>.</p>
 <p>4.在<code>page.evaluate()</code>方法中注册回调函数，并分析dom结构，从下图可以进行详细分析，并通过<code>document.querySelectorAll(&#39;ol li a&#39;)</code>拿到想要获取的内容.</p>
 <h4 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h4><p><a href="https://github.com/easy261925/Puppeteer" target="_blank" rel="noopener">点我查看详细代码</a></p>
+<p>或 <code>git clone git@github.com:easy261925/Puppeteer.git</code></p>
 <h4 id="说一下我遇到坑吧"><a href="#说一下我遇到坑吧" class="headerlink" title="说一下我遇到坑吧"></a>说一下我遇到坑吧</h4><ol>
-<li>在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,<a href="链接: https://pan.baidu.com/s/1dIMKjk"> node_modules 百度云下载地址 </a> 密码: bxhy. 不需要 <code>npm i</code>了, 下载完后直接使用<code>node getData.js</code>即可.</li>
-<li>代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array<br>的新用法还不是特别清楚， 本人打算学习<a href="https://github.com/ruanyf/es6tutorial" target="_blank" rel="noopener"> 阮一峰老师的ES6 </a>之后, 在来详细补充其原理.</li>
-<li>爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:<code>img:[&#39;1.jpg&#39;,&#39;2.jpg&#39;,&#39;3.jpg&#39;];title:[ &#39;AAAAAAA&#39;,&#39;BBBBBBB&#39;]</code> 为了使用方便，我们对数据做了一些调整，让它变为<code>[{item1:[&#39;1.jpg&#39;,&#39;AAAAAAA&#39;]},{item1:[&#39;2.jpg&#39;,&#39;BBBBBBB&#39;]}]</code>,这样我们在铺到页面上时使用更加方便了.</li>
+<li>在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,<a href="https://pan.baidu.com/s/1dIMKjk" target="_blank" rel="noopener"> node_modules 百度云下载地址 </a> 密码: bxhy. 不需要 <code>npm i</code>了, 下载完后直接使用<code>node getData.js</code>即可.</li>
+<li>代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array<br>的新用法还不是特别清楚， 本人打算学习<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener"> 阮一峰老师的ES6 </a>之后, 在来详细补充其原理.</li>
+<li>爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:<code>img:[&#39;1.jpg&#39;,&#39;2.jpg&#39;];title:[ &#39;AAAAAAA&#39;,&#39;BBBBBBB&#39;]</code> 为了使用方便，我们对数据做了一些调整，让它变为<code>[{item1:[&#39;1.jpg&#39;,&#39;AAAAAAA&#39;]},{item1:[&#39;2.jpg&#39;,&#39;BBBBBBB&#39;]}]</code>,这样我们在铺到页面上时使用更加方便了.( 经历此过程也体验了一回写 API 接口的感觉 全是眼泪啊~~~ )</li>
 </ol>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。</p>
-<p>特别感谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
+<p>特别鸣谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
 <h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
       
     </div>
@@ -424,10 +425,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -452,7 +453,7 @@
                   <a href="/archives">
                 
                     <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -463,7 +464,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">categories</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   
                 </div>
               
@@ -474,7 +475,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">Tags</span>
                   
                 </div>
               

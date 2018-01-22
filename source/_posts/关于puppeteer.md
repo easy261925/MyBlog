@@ -15,7 +15,7 @@ categories: Node
 
 ### [详情请看Puppeteer官方文档](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser)
 
-阅读以下内容，可以实现爬取[片刻网](http://pianke.me)的首页数据,并且通过 [Express](http://expressjs.com/) 构建一个简单网页,来展示爬取到的内容。
+阅读以下内容，可以实现爬取[片刻网](http://pianke.me)的首页数据。
 
 #### Puppeteer 几个重要功能
 * 可以抓取网站内容
@@ -46,18 +46,20 @@ categories: Node
 
 [点我查看详细代码](https://github.com/easy261925/Puppeteer)
 
+或 `git clone git@github.com:easy261925/Puppeteer.git`
+
 #### 说一下我遇到坑吧
 
-1. 在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,[ node_modules 百度云下载地址 ](链接: https://pan.baidu.com/s/1dIMKjk) 密码: bxhy. 不需要 `npm i`了, 下载完后直接使用`node getData.js`即可.
+1. 在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,[ node_modules 百度云下载地址 ](https://pan.baidu.com/s/1dIMKjk) 密码: bxhy. 不需要 `npm i`了, 下载完后直接使用`node getData.js`即可.
 2. 代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array
-的新用法还不是特别清楚， 本人打算学习[ 阮一峰老师的ES6 ](https://github.com/ruanyf/es6tutorial)之后, 在来详细补充其原理.
-3. 爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:` img:['1.jpg','2.jpg','3.jpg'];title:[ 'AAAAAAA','BBBBBBB'] ` 为了使用方便，我们对数据做了一些调整，让它变为`[{item1:['1.jpg','AAAAAAA']},{item1:['2.jpg','BBBBBBB']}]`,这样我们在铺到页面上时使用更加方便了.
+的新用法还不是特别清楚， 本人打算学习[ 阮一峰老师的ES6 ](http://es6.ruanyifeng.com/#README)之后, 在来详细补充其原理.
+3. 爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:` img:['1.jpg','2.jpg'];title:[ 'AAAAAAA','BBBBBBB'] ` 为了使用方便，我们对数据做了一些调整，让它变为`[{item1:['1.jpg','AAAAAAA']},{item1:['2.jpg','BBBBBBB']}]`,这样我们在铺到页面上时使用更加方便了.( 经历此过程也体验了一回写 API 接口的感觉 全是眼泪啊~~~ )
 
 
 ### 结语
 由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。
 
-特别感谢:[QC-L老师](https://github.com/QC-L)，[marryyan ](https://github.com/marryyan)的帮助.
+特别鸣谢:[QC-L老师](https://github.com/QC-L)，[marryyan ](https://github.com/marryyan)的帮助.
 
 ### 未完待续。。。
 
