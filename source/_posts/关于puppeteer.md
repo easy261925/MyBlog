@@ -7,13 +7,9 @@ categories: Node
 
 ### 介绍一下Puppeteer
 
->Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI）
->
->有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。
->
->使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关
+>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI</br>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。</br>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关
 
-### [详情请看Puppeteer官方文档](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser)
+#### [详情请看Puppeteer官方文档](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser)
 
 阅读以下内容，可以实现爬取[片刻网](http://pianke.me)的首页数据。
 
@@ -24,11 +20,11 @@ categories: Node
 
 接下来的操作基于 Node 环境
 
-`mkdir test && cd test`
-
-`npm init`
-
-`npm install puppeteer`
+```
+mkdir test && cd test
+npm init
+npm install puppeteer
+```
 
 <!--上述命令墙内用户可能会有问题，建议科学上网-->
 
@@ -62,6 +58,8 @@ categories: Node
 特别鸣谢:[QC-L老师](https://github.com/QC-L)，[marryyan ](https://github.com/marryyan)的帮助.
 
 ### 未完待续。。。
+
+##### 参考文章:[https://segmentfault.com/a/1190000010736797](https://segmentfault.com/a/1190000010736797)
 
 
 
