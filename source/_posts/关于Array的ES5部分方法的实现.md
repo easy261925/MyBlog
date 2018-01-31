@@ -7,7 +7,7 @@ tags:
 
 > forEach
 
-<pre><code>
+```js
 if (typeof Array.prototype.forEach !== &quot;function&quot;) {
     Array.prototype.myForEach = function (fn) {
         for (var i = 0; i &lt; this.length; i++) {
@@ -30,11 +30,10 @@ array.myForEach(function (value, index, array) {
     console.log(index);
     console.log(array);
 })
-</code></pre>
-
+```
 > map
 
-<pre><code>
+```js
 if (typeof Array.prototype.map !== &quot;function&quot;) {
 Array.prototype.myMap = function (fn) {
         var temp = [];
@@ -55,11 +54,11 @@ var arr2 = arr1.myMap(function (value) {
     return value * 2;
 })
 console.log(arr2);
-</code></pre>
+```
 
 > filter
 
-<pre><code>
+```js
 if(typeof Array.prototype.filter !== &quot;function&quot;){
 	Array.prototype.myFilter = function(fn){
         var temp = [];
@@ -80,5 +79,5 @@ var arr2 = arr1.myFilter(function(value){
     return value &lt; 5;
 })
 console.log(arr2);
-</code></pre>
+```
 
