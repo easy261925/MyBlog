@@ -4,7 +4,7 @@ date: 2018-01-31 09:03:54
 tags: React
 categories: React
 ---
-
+![](http://p2oiag4fy.bkt.clouddn.com/React.jpeg)
 # 一 、属性和状态
 
 ### (一)什么是属性？
