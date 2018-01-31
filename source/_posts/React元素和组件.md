@@ -1,7 +1,8 @@
 ---
 title: React元素和组件
 date: 2018-01-31 09:03:54
-tags:
+tags: React
+categories: React
 ---
 
 # 一 、属性和状态
