@@ -75,17 +75,17 @@
 
 
 
-<meta name="description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
+<meta name="description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，">
 <meta name="keywords" content="puppeteer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于puppeteer">
 <meta property="og:url" content="http://yoursite.com/2018/01/20/关于puppeteer/index.html">
 <meta property="og:site_name" content="万事如意">
-<meta property="og:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
-<meta property="og:updated_time" content="2018-01-22T01:46:19.024Z">
+<meta property="og:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，">
+<meta property="og:updated_time" content="2018-01-22T02:03:33.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于puppeteer">
-<meta name="twitter:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI） 有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。 使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更">
+<meta name="twitter:description" content="介绍一下Puppeteer Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，">
 
 
 
@@ -304,20 +304,16 @@
 
       
         <h3 id="介绍一下Puppeteer"><a href="#介绍一下Puppeteer" class="headerlink" title="介绍一下Puppeteer"></a>介绍一下Puppeteer</h3><blockquote>
-<p>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI）</p>
-<p>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。</p>
-<p>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
+<p>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI<br>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。<br>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
 </blockquote>
-<h3 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h3><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据。</p>
+<h4 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h4><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据。</p>
 <h4 id="Puppeteer-几个重要功能"><a href="#Puppeteer-几个重要功能" class="headerlink" title="Puppeteer 几个重要功能"></a>Puppeteer 几个重要功能</h4><ul>
 <li>可以抓取网站内容</li>
 <li>可以自动化表单提交、搜索网络内容、UI测试等</li>
 <li>获取网页生成的PDF、图片、视频等资源</li>
 </ul>
 <p>接下来的操作基于 Node 环境</p>
-<p><code>mkdir test &amp;&amp; cd test</code></p>
-<p><code>npm init</code></p>
-<p><code>npm install puppeteer</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir test &amp;&amp; cd test</span><br><span class="line">npm init</span><br><span class="line">npm install puppeteer</span><br></pre></td></tr></table></figure>
 <!--上述命令墙内用户可能会有问题，建议科学上网-->
 <h4 id="Puppeteer-基本用法"><a href="#Puppeteer-基本用法" class="headerlink" title="Puppeteer 基本用法"></a>Puppeteer 基本用法</h4><p>1.使用<code>puppeteer.launch()</code>运行puppeteer，他会return一个promise，使用then方法获取browser实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">Browser API</a>.</p>
 <p>2.拿到browser实例后，通过<code>browser.newPage()</code>方法，可以得到一个page实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page" target="_blank" rel="noopener">Page API</a>.</p>
@@ -332,7 +328,7 @@
 </ol>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。</p>
 <p>特别鸣谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
-<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3><h5 id="参考文章-https-segmentfault-com-a-1190000010736797"><a href="#参考文章-https-segmentfault-com-a-1190000010736797" class="headerlink" title="参考文章:https://segmentfault.com/a/1190000010736797"></a>参考文章:<a href="https://segmentfault.com/a/1190000010736797" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010736797</a></h5>
       
     </div>
     
@@ -371,6 +367,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/31/React元素和组件/" rel="prev" title="React元素和组件">
+                React元素和组件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -452,7 +452,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -523,7 +523,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍一下Puppeteer"><span class="nav-number">1.</span> <span class="nav-text">介绍一下Puppeteer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详情请看Puppeteer官方文档"><span class="nav-number">2.</span> <span class="nav-text">详情请看Puppeteer官方文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-几个重要功能"><span class="nav-number">2.1.</span> <span class="nav-text">Puppeteer 几个重要功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-基本用法"><span class="nav-number">2.2.</span> <span class="nav-text">Puppeteer 基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码"><span class="nav-number">2.3.</span> <span class="nav-text">具体代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说一下我遇到坑吧"><span class="nav-number">2.4.</span> <span class="nav-text">说一下我遇到坑吧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">4.</span> <span class="nav-text">未完待续。。。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍一下Puppeteer"><span class="nav-number">1.</span> <span class="nav-text">介绍一下Puppeteer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#详情请看Puppeteer官方文档"><span class="nav-number">1.1.</span> <span class="nav-text">详情请看Puppeteer官方文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-几个重要功能"><span class="nav-number">1.2.</span> <span class="nav-text">Puppeteer 几个重要功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Puppeteer-基本用法"><span class="nav-number">1.3.</span> <span class="nav-text">Puppeteer 基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码"><span class="nav-number">1.4.</span> <span class="nav-text">具体代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说一下我遇到坑吧"><span class="nav-number">1.5.</span> <span class="nav-text">说一下我遇到坑吧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">2.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">3.</span> <span class="nav-text">未完待续。。。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参考文章-https-segmentfault-com-a-1190000010736797"><span class="nav-number">3.0.1.</span> <span class="nav-text">参考文章:https://segmentfault.com/a/1190000010736797</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
