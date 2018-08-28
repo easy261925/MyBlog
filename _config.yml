@@ -80,4 +80,6 @@ theme: hexo-theme-next-master
 deploy:
   type: git
   #repo: git@github.com:easy261925/MyWebBlog.git
-  repo: git@github.com:easy261925/MyBlog.git
+  #repo: git@github.com:easy261925/MyBlog.git
+  repo: git@github.com:easy261925/easy261925.github.io.git
+  branch: master
