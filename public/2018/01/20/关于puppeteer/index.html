@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="介绍一下Puppeteer
+Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。使用Puppeteer，相当于同时">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="关于puppeteer">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="介绍一下Puppeteer
+Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。使用Puppeteer，相当于同时">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hexo">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>关于puppeteer - Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">在平坦的道路上曲折前行...</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/easy261925">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>关于puppeteer</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-01-20
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/puppeteer/">#puppeteer</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Node/">Node</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="介绍一下Puppeteer"><a href="#介绍一下Puppeteer" class="headerlink" title="介绍一下Puppeteer"></a>介绍一下Puppeteer</h3><blockquote>
+<p>Puppeteer是一个node库，他提供了一组用来操纵Chrome的API（默认headless也就是无UI的chrome，也可以配置为有UI<br>有点类似于PhantomJS，但Puppeteer是Chrome官方团队进行维护的，前景更好。<br>使用Puppeteer，相当于同时具有Linux和Chrome的能力，应用场景会非常多。就爬虫领域来说，远比一般的爬虫工具功能更丰富，性能分析、自动化测试也不在话下，今天先探讨爬虫相关</p>
+</blockquote>
+<h4 id="详情请看Puppeteer官方文档"><a href="#详情请看Puppeteer官方文档" class="headerlink" title="详情请看Puppeteer官方文档"></a><a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">详情请看Puppeteer官方文档</a></h4><p>阅读以下内容，可以实现爬取<a href="http://pianke.me" target="_blank" rel="noopener">片刻网</a>的首页数据。</p>
+<h4 id="Puppeteer-几个重要功能"><a href="#Puppeteer-几个重要功能" class="headerlink" title="Puppeteer 几个重要功能"></a>Puppeteer 几个重要功能</h4><ul>
+<li>可以抓取网站内容</li>
+<li>可以自动化表单提交、搜索网络内容、UI测试等</li>
+<li>获取网页生成的PDF、图片、视频等资源</li>
+</ul>
+<p>接下来的操作基于 Node 环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir test &amp;&amp; cd test</span><br><span class="line">npm init</span><br><span class="line">npm install puppeteer</span><br></pre></td></tr></table></figure>
+<!--上述命令墙内用户可能会有问题，建议科学上网-->
+<h4 id="Puppeteer-基本用法"><a href="#Puppeteer-基本用法" class="headerlink" title="Puppeteer 基本用法"></a>Puppeteer 基本用法</h4><p>1.使用<code>puppeteer.launch()</code>运行puppeteer，他会return一个promise，使用then方法获取browser实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-browser" target="_blank" rel="noopener">Browser API</a>.</p>
+<p>2.拿到browser实例后，通过<code>browser.newPage()</code>方法，可以得到一个page实例，<a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page" target="_blank" rel="noopener">Page API</a>.</p>
+<p>3.使用<code>page.goto()</code>方法，<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener">跳转至ES6标准入门</a>.</p>
+<p>4.在<code>page.evaluate()</code>方法中注册回调函数，并分析dom结构，从下图可以进行详细分析，并通过<code>document.querySelectorAll(&#39;ol li a&#39;)</code>拿到想要获取的内容.</p>
+<h4 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h4><p><a href="https://github.com/easy261925/Puppeteer" target="_blank" rel="noopener">点我查看详细代码</a></p>
+<p>或 <code>git clone git@github.com:easy261925/Puppeteer.git</code></p>
+<h4 id="说一下我遇到坑吧"><a href="#说一下我遇到坑吧" class="headerlink" title="说一下我遇到坑吧"></a>说一下我遇到坑吧</h4><ol>
+<li>在配置环境的时候由于网络的原因，在安装 Puppetee 的时候可能会无法安装,<a href="https://pan.baidu.com/s/1dIMKjk" target="_blank" rel="noopener"> node_modules 百度云下载地址 </a> 密码: bxhy. 不需要 <code>npm i</code>了, 下载完后直接使用<code>node getData.js</code>即可.</li>
+<li>代码的实现过程, 在看过网上很多关于 Puppeteer 技术文章和同学大力帮助之后，也算把想要的结果得到了，但是关于 async Promise await 等函数以及 ES6 Array<br>的新用法还不是特别清楚， 本人打算学习<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="noopener"> 阮一峰老师的ES6 </a>之后, 在来详细补充其原理.</li>
+<li>爬取到的数据是通过 class 名，找到里面元素的 src/style/innerText，但是获取到的数据格式为:<code>img:[&#39;1.jpg&#39;,&#39;2.jpg&#39;];title:[ &#39;AAAAAAA&#39;,&#39;BBBBBBB&#39;]</code> 为了使用方便，我们对数据做了一些调整，让它变为<code>[{item1:[&#39;1.jpg&#39;,&#39;AAAAAAA&#39;]},{item1:[&#39;2.jpg&#39;,&#39;BBBBBBB&#39;]}]</code>,这样我们在铺到页面上时使用更加方便了.( 经历此过程也体验了一回写 API 接口的感觉 全是眼泪啊~~~ )</li>
+</ol>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>由于能力有限,存在的问题还有很多，请看到此文的人不吝赐教，感激不尽。</p>
+<p>特别鸣谢:<a href="https://github.com/QC-L" target="_blank" rel="noopener">QC-L老师</a>，<a href="https://github.com/marryyan" target="_blank" rel="noopener">marryyan </a>的帮助.</p>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3><h5 id="参考文章-https-segmentfault-com-a-1190000010736797"><a href="#参考文章-https-segmentfault-com-a-1190000010736797" class="headerlink" title="参考文章:https://segmentfault.com/a/1190000010736797"></a>参考文章:<a href="https://segmentfault.com/a/1190000010736797" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010736797</a></h5>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/easy261925" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 John Doe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

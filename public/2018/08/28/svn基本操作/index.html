@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="svn基本的操作: 流程:
+　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="svn基本操作">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="svn基本的操作: 流程:
+　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hexo">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>svn基本操作 - Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">在平坦的道路上曲折前行...</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/easy261925">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>svn基本操作</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-08-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/svn/">#svn</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="svn基本的操作"><a href="#svn基本的操作" class="headerlink" title="svn基本的操作:"></a>svn基本的操作:</h3><p> 流程:</p>
+<p>　　你刚刚进入一个新的公司，让你接手一个正在进行的项目，你打开终端写下了：svn co svn://192.168.1.1/pro/domain 然后就可以在当前目录里面找到一个叫domain的项目，cd domain，你浏览了几行代码，太特么的竟然有bug，你忍不住改了，你要提交了，svn ci -m ‘something’  ，成功。你又在domain下得app文件夹下添加了几个.php文件，把整个项目都做完了！你又打开终端：svn add domain/app/*.php 添加成功。太牛逼了，下班了，你去吃了一碗自己最喜欢的老坛酸菜味方便面。</p>
+<p>以下是一些常用命令</p>
+<p><strong>1、</strong>将文件checkout到本地目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 svn checkout path（path是服务器上的目录）</span><br><span class="line"></span><br><span class="line">2 例如：svn checkout svn://192.168.1.1/pro/domain</span><br><span class="line"></span><br><span class="line">3 简写：svn co</span><br></pre></td></tr></table></figure>
+<p><strong>2、</strong>往版本库中添加新的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 svn add file</span><br><span class="line"></span><br><span class="line">2 例如：svn add test.php(添加test.php)</span><br><span class="line"></span><br><span class="line">3 svn add *.php(添加当前目录下所有的php文件)</span><br></pre></td></tr></table></figure>
+<p><strong>3、</strong>将改动的文件提交到版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 svn commit -m “LogMessage“ -N PATH　　　　　　　　(如果选择了保持锁，就使用–no-unlock开关)</span><br><span class="line"></span><br><span class="line">2 例如：</span><br><span class="line"></span><br><span class="line">　　svn commit -m “add <span class="built_in">test</span> file <span class="keyword">for</span> my <span class="built_in">test</span>“ test.php</span><br><span class="line"></span><br><span class="line">3 简写：</span><br><span class="line"></span><br><span class="line">　　svn ci</span><br></pre></td></tr></table></figure>
+<p><strong>4、</strong>加锁/解锁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 svn lock -m “LockMessage“ [--force] PATH</span><br><span class="line"></span><br><span class="line">2 例如：svn lock -m “lock <span class="built_in">test</span> file“ test.php</span><br><span class="line"></span><br><span class="line">3 svn unlock PATH</span><br></pre></td></tr></table></figure>
+<p><strong>5、</strong>更新到某个版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1 svn update -r m path</span><br><span class="line"></span><br><span class="line">2 例如：</span><br><span class="line"></span><br><span class="line">3 svn update如果后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本。</span><br><span class="line"></span><br><span class="line">4 svn update -r 200 test.php(将版本库中的文件test.php还原到版本200)</span><br><span class="line"></span><br><span class="line">5 svn update test.php(更新，于版本库同步。如果在提交的时候提示过期的话，是因为冲突，需要先update，修改文件，然后清除svn resolved，最后再提交commit)</span><br><span class="line"></span><br><span class="line">6 简写：svn up</span><br></pre></td></tr></table></figure>
+<p><strong>6、</strong>查看文件或者目录状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1 1）svn status path（目录下的文件和子目录的状态，正常状态不显示）</span><br><span class="line"></span><br><span class="line">2 【?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定】</span><br><span class="line"></span><br><span class="line">3 2）svn status -v path(显示文件和子目录状态)</span><br><span class="line"></span><br><span class="line">4 第一列保持相同，第二列显示工作版本号，第三和第四列显示最后一次修改的版本号和修改人。</span><br><span class="line"></span><br><span class="line">5 注：svn status、svn diff和 svn revert这三条命令在没有网络的情况下也可以执行的，原因是svn在本地的.svn中保留了本地版本的原始拷贝。</span><br><span class="line"></span><br><span class="line">6 简写：svn st</span><br></pre></td></tr></table></figure>
+<p><strong>7、</strong>删除文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 svn delete path -m “delete <span class="built_in">test</span> fle“</span><br><span class="line"></span><br><span class="line">2 例如：svn delete svn://192.168.1.1/pro/domain/test.php -m “delete <span class="built_in">test</span> file”</span><br><span class="line"></span><br><span class="line">3 或者直接svn delete test.php 然后再svn ci -m ‘delete <span class="built_in">test</span> file‘，推荐使用这种</span><br><span class="line"></span><br><span class="line">4 简写：svn (del, remove, rm)</span><br></pre></td></tr></table></figure>
+<p><strong>8、</strong>查看日志</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 svn <span class="built_in">log</span> path</span><br><span class="line"></span><br><span class="line">2 例如：svn <span class="built_in">log</span> test.php 显示这个文件的所有修改记录，及其版本号的变化</span><br></pre></td></tr></table></figure>
+<p><strong>9、</strong>查看文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 svn info path</span><br><span class="line"></span><br><span class="line">2 例如：svn info test.php</span><br></pre></td></tr></table></figure>
+<p><strong>10、</strong>比较差异</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 svn diff path(将修改的文件与基础版本比较)</span><br><span class="line"></span><br><span class="line">2 例如：svn diff test.php</span><br><span class="line"></span><br><span class="line">3 svn diff -r m:n path(对版本m和版本n比较差异)</span><br><span class="line"></span><br><span class="line">4 例如：svn diff -r 200:201 test.php</span><br><span class="line"></span><br><span class="line">5 简写：svn di</span><br></pre></td></tr></table></figure>
+<p><strong>11、</strong>将两个版本之间的差异合并到当前文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 svn merge -r m:n path</span><br><span class="line"></span><br><span class="line">2 例如：svn merge -r 200:205 test.php（将版本200与205之间的差异合并到当前文件，但是一般都会产生冲突，需要处理一下）</span><br></pre></td></tr></table></figure>
+<p><strong>12、</strong>SVN 帮助</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 svn <span class="built_in">help</span></span><br><span class="line"></span><br><span class="line">2 svn <span class="built_in">help</span> ci</span><br></pre></td></tr></table></figure>
+<p><strong>13、</strong>版本库下的文件和目录列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 svn list path</span><br><span class="line"></span><br><span class="line">2 显示path目录下的所有属于版本库的文件和目录</span><br><span class="line"></span><br><span class="line">3 简写：svn ls</span><br></pre></td></tr></table></figure>
+<p><strong>14、</strong>创建纳入版本控制下的新目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1 svn mkdir: 创建纳入版本控制下的新目录。</span><br><span class="line"></span><br><span class="line">2 用法: 1、mkdir PATH…</span><br><span class="line"></span><br><span class="line">3 2、mkdir URL…</span><br><span class="line"></span><br><span class="line">4 创建版本控制的目录。</span><br><span class="line"></span><br><span class="line">5 1、每一个以工作副本 PATH 指定的目录，都会创建在本地端，并且加入新增</span><br><span class="line"></span><br><span class="line">6 调度，以待下一次的提交。</span><br><span class="line"></span><br><span class="line">7 2、每个以URL指定的目录，都会透过立即提交于仓库中创建。</span><br><span class="line"></span><br><span class="line">8 在这两个情况下，所有的中间目录都必须事先存在</span><br></pre></td></tr></table></figure>
+<p><strong>15、</strong>恢复本地修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 svn revert: 恢复原始未改变的工作副本文件 (恢复大部份的本地修改)。revert:</span><br><span class="line"></span><br><span class="line">2 用法: revert PATH…</span><br><span class="line"></span><br><span class="line">3 注意: 本子命令不会存取网络，并且会解除冲突的状况。但是它不会恢复</span><br><span class="line"></span><br><span class="line">4 被删除的目录</span><br></pre></td></tr></table></figure>
+<p><strong>16、</strong>代码库URL变更</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> 1 svn switch (sw): 更新工作副本至不同的URL。</span><br><span class="line"></span><br><span class="line"> 2 用法: 1、switch URL [PATH]</span><br><span class="line"></span><br><span class="line"> 3 2、switch –relocate FROM TO [PATH...]</span><br><span class="line"></span><br><span class="line"> 4  </span><br><span class="line"></span><br><span class="line"> 5 1、更新你的工作副本，映射到一个新的URL，其行为跟“svn update”很像，也会将</span><br><span class="line"></span><br><span class="line"> 6 服务器上文件与本地文件合并。这是将工作副本对应到同一仓库中某个分支或者标记的</span><br><span class="line"></span><br><span class="line"> 7 方法。</span><br><span class="line"></span><br><span class="line"> 8 2、改写工作副本的URL元数据，以反映单纯的URL上的改变。当仓库的根URL变动</span><br><span class="line"></span><br><span class="line"> 9 (比如方案名或是主机名称变动)，但是工作副本仍旧对映到同一仓库的同一目录时使用</span><br><span class="line"></span><br><span class="line">10 这个命令更新工作副本与仓库的对应关系。</span><br></pre></td></tr></table></figure>
+<p><strong>17、</strong>解决冲突</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 svn resolved: 移除工作副本的目录或文件的“冲突”状态。</span><br><span class="line"></span><br><span class="line">2 用法: resolved PATH…</span><br><span class="line"></span><br><span class="line">3 注意: 本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的</span><br><span class="line"></span><br><span class="line">4 相关文件，然后让 PATH 可以再次提交。</span><br></pre></td></tr></table></figure>
+<h4 id="原文引自"><a href="#原文引自" class="headerlink" title="原文引自"></a><a href="https://www.cnblogs.com/luckythan/p/4478706.html" target="_blank" rel="noopener">原文引自</a></h4>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/easy261925" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 John Doe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
